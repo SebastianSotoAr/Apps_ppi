@@ -8,9 +8,13 @@ import numpy as np
 import geopandas as gpd
 import matplotlib.pyplot as plt
 
-def cargar_datos():
+ruta = "https://raw.githubusercontent.com/gabrielawad/\
+programacion-para-ingenieria/refs/heads/main/archivos-datos/aplicaciones/\
+deforestacion.csv"
+
+def cargar_datos(url):
     """Carga los datos desde un archivo CSV."""
-    return pd.read_csv("https://raw.githubusercontent.com/gabrielawad/programacion-para-ingenieria/refs/heads/main/archivos-datos/aplicaciones/deforestacion.csv")
+    return pd.read_csv(url)
 
 def graficar_mapa(df, variable):
     """Genera un mapa interactivo de la variable seleccionada."""
@@ -38,7 +42,7 @@ def filtrar_datos(df, variables, rangos):
 def main():
     """Función principal para ejecutar la app en Streamlit."""
     st.title("Análisis de Deforestación")
-    datos = cargar_datos()
+    datos = cargar_datos(ruta)
     
     st.subheader("Mapa de deforestación")
     variable_mapa = st.selectbox("Selecciona una variable para el mapa:", datos.columns[3:])

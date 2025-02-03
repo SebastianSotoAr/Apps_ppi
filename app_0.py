@@ -1,4 +1,5 @@
-!pip install geodatasets
+!pip install geopandas
+!pip install numpy
 """
 Aplicación en Streamlit para análisis de deforestación
 """

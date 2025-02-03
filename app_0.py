@@ -1,3 +1,4 @@
+!pip install geodatasets
 """
 Aplicación en Streamlit para análisis de deforestación
 """

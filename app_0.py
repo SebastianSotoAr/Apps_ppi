@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 def cargar_datos():
     """Carga los datos desde un archivo CSV."""
-    return pd.read_csv("datos_deforestacion.csv")
+    return pd.read_csv("https://raw.githubusercontent.com/gabrielawad/programacion-para-ingenieria/refs/heads/main/archivos-datos/aplicaciones/deforestacion.csv")
 
 def graficar_mapa(df, variable):
     """Genera un mapa interactivo de la variable seleccionada."""

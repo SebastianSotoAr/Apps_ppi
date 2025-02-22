@@ -20,7 +20,7 @@ categorias = [
 categoria = st.selectbox("Elige una categoría:", categorias)
 
 # Resive números
-valor = st.number_input("Introduce el valor:", format="%.0f")
+valor = st.number_input("Introduce el valor:", format="%.2f")
 if valor:
     st.write(f'Guardo: {valor}')
 
@@ -33,3 +33,7 @@ boton = st.button("Botón")
 # Evento
 if boton:
     st.write('Escucho el evento')
+
+# Secciones principales de la app
+menu = ["Presupuesto", "Ingresos", "Gastos", "Metas de Ahorro", "Reportes"]
+opcion = st.sidebar.selectbox("Elige una sección:", menu)

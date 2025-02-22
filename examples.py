@@ -20,7 +20,7 @@ categorias = [
 categoria = st.selectbox("Elige una categoría:", categorias)
 
 # Resive números
-valor = st.number_input("Introduce el valor:", format="%.2f")
+valor = st.number_input("Introduce el valor:", format="%.0f")
 
 # Resive texto
 texto = st.text_input('Introduce el texto')

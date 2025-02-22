@@ -21,6 +21,8 @@ categoria = st.selectbox("Elige una categoría:", categorias)
 
 # Resive números
 valor = st.number_input("Introduce el valor:", format="%.0f")
+if valor:
+    st.write(f'Guardo: {valor}')
 
 # Resive texto
 texto = st.text_input('Introduce el texto')

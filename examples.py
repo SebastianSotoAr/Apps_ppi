@@ -7,5 +7,5 @@ st.title('Este es el Titulo')
 st.markdown('Esto es para información importante de la App')
 
 # Descripción
-st.write('Escribe texto')
+st.write('Este escribe texto')
 

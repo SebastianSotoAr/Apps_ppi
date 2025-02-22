@@ -36,8 +36,8 @@ if boton:
 
 # Sidebar
 menu1 = ['Item 1.1.', 'Item 1.2.', 'Item 1.3.']
-opcion1 = st.sidebar.selectbox('Menú 1:", menu1)
+opcion1 = st.sidebar.selectbox('Menú 1:', menu1)
 menu2 = ['Item 2.1.', 'Item 2.2.', 'Item 2.3.']
-opcion2 = st.sidebar.selectbox('Menú 2:", menu2)
+opcion2 = st.sidebar.selectbox('Menú 2:', menu2)
 menu3 = ['Item 3.1.', 'Item 3.2.', 'Item 3.3.']
-opcion3 = st.sidebar.selectbox('Menú 3:", menu3)
+opcion3 = st.sidebar.selectbox('Menú 3:', menu3)

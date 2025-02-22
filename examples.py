@@ -18,3 +18,16 @@ categorias = [
 
 # Selección de categoría
 categoria = st.selectbox("Elige una categoría:", categorias)
+
+# Resive números
+valor = st.number_input("Introduce el valor:", format="%.2f")
+
+# Resive texto
+texto = st.text_input('Introduce el texto')
+
+# Botón
+boton = st.button("Botón")
+
+# Evento
+if boton:
+    st.write('Escucho el evento')

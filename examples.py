@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 # Título de la app
 st.title('Este es el Titulo')
@@ -33,6 +34,12 @@ boton = st.button("Botón")
 # Evento
 if boton:
     st.write('Escucho el evento')
+
+#Datafrem
+ruta = "https://raw.githubusercontent.com/gabrielawad/\
+programacion-para-ingenieria/refs/heads/main/archivos-datos/pandas/\
+encuestas_satisfaccion.csv"
+table = st.dataframe(pd.read_csv(ruta))
 
 # Sidebar
 menu1 = ['Item 1.1.', 'Item 1.2.', 'Item 1.3.']

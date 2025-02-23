@@ -1,14 +1,37 @@
+import pandas as pd
 import streamlit as st
 
+# Guardar en la variable 'ruta' la url del dataset
+ruta = "https://raw.githubusercontent.com/gabrielawad/\
+programacion-para-ingenieria/refs/heads/main/archivos-datos/pandas/\
+encuestas_satisfaccion.csv"
+
+# Cargar el dataset a partir de la ruta establecida
+def carga_datos_csv(url):
+    """
+    Carga un archivo CSV desde una URL y lo devuelve como un DataFrame de
+    Pandas.
+
+    Args:
+        url(str): URL del archivo CSV.
+
+    Returns:
+        pd.DataFrame: DataFrame cargado desde la URL.
+    """
+    data = pd.read_csv(url)
+
+    return data
+
+
+# Guardar el dataset en la variable 'datos'
+datos = carga_datos_csv(ruta)
+
 # Título de la app
-st.title('Mi primera app')
+st.title('Datos de satisfacción')
 
-# Autor
-st.markdown('Esta app fue elaborada por Sebastián Soto Arcila.')
+# Info
+st.markdown('Desarrollado por SebastianSotoAr')
 
-# Solicitar el nombre del usuario
-nombre_usuario = st.text_input('¿Cuál es tu nombre?')
-
-# Mostrar mensaje de bienvenida cuando el usuario ingresa su nombre
-if nombre_usuario:
-    st.write(f'{nombre_usuario}, te doy la bienvenida a mi primera app.')
+# Descripción
+st.write('Resumen de los datos')
+st.dataframe(datos)
